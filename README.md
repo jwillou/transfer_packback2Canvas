@@ -1,1 +1,2 @@
 # transfer_packback2Canvas
+This script helps with moving data from Packback to Canvas efficiently by adding data needed to import student reports into Canvas to the Packback output. The script runs in R, and requires as input a copy of the current roster and associated ID information (downloaded from canvas) and a grade export from Packback. Examples of both files included with simulated names/ID numbers.
