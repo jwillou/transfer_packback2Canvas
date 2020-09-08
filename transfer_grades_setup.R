@@ -13,6 +13,7 @@ if(grades[1,1]=="custom_id"){
 #add roster information
 #note: must add quotes in case student names contain non alphanumeric characters (replace , with "," and replace \n with "\n"; then add fist and last " in doc)
 names = read.table("names_ids.csv", header=T, sep=",") 
+names = names[-1,1:5]
 
 #week 2+ (week 1 did not count towards semester totals)
 to.add = data.frame(SIS.User.ID = grades$custom_id, wkpk = grades$Score) #check score column name
