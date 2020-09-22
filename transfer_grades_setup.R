@@ -1,7 +1,7 @@
 setwd("~/Documents/Teaching/WILD 2050/2020_Fall/packback/")
 
 #import week's data
-week   = 3
+week   = 4
 grades = read.table(paste("packback", week, ".csv", sep=""), header=T, sep=",") #note: if adding multiple weeks at a time remove row 1
 
 #fix grade input file
@@ -13,7 +13,7 @@ if(grades[1,1]=="custom_id"){
 #add roster information
 #note: must add quotes in case student names contain non alphanumeric characters (replace , with "," and replace \n with "\n"; then add fist and last " in doc)
 names = read.table("names_ids.csv", header=T, sep=",") 
-names = names[-1,1:5]
+#names = names[-1,1:5]
 
 #week 2+ (week 1 did not count towards semester totals)
 to.add = data.frame(SIS.User.ID = grades$custom_id, wkpk = grades$Score) #check score column name
