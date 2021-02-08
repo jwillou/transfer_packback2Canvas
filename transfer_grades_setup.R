@@ -2,7 +2,7 @@ setwd("~/Box/WILD 2050 (Janna Willoughby)/2021_spring/packback/") #home
 setwd("~/Box Sync/WILD 2050/2021_spring/packback/") #work
 
 #import week's data
-week   = 4
+week   = 5
 grades = read.table(paste("packback", week, ".csv", sep=""), header=T, sep=",") #note: if adding multiple weeks at a time remove row 1
 
 #fix grade input file
