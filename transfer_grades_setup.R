@@ -2,7 +2,7 @@ setwd("~/Box/WILD 2050 (Janna Willoughby)/2021_spring/packback/") #home
 setwd("~/Box Sync/WILD 2050/2021_spring/packback/") #work
 
 #import week's data
-week   = 5
+week   = 6
 grades = read.table(paste("packback", week, ".csv", sep=""), header=T, sep=",") #note: if adding multiple weeks at a time remove row 1
 
 #fix grade input file
@@ -28,5 +28,6 @@ names.out = data.frame(names = names$Student, Sid = names$ID, SISID = names$SIS.
 
 #export data file
 ####spring 2021 edit note: week numbers are corrected by 1! #####
+names.out = names.out[!is.na(names.out$names),]
 write.table(names.out, paste("import_wk", week, ".csv", sep=""), sep=",", row.names=F, col.names=c("Student Name", "Student ID", "SIS User ID", "SIS Login ID", "Section", paste("Week ", (week-1), " Packback", sep="")))
 
